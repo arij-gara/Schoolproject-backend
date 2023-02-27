@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
-  admin: { type: Boolean, default: false },
+  isadmin: { type: Boolean, default: false },
   professor: { type: Boolean, default: false },
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
@@ -13,4 +13,4 @@ const userSchema = new Schema({
   classes: [{ type: Schema.Types.ObjectId, ref: "Class" }],
 });
 
-module.exports = User = model("user", userSchema);
+ module.exports = User = model("user", userSchema);
